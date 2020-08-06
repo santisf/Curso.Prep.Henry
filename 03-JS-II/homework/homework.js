@@ -1,6 +1,11 @@
 // No cambies los nombres de las funciones.
 
 function obtenerMayor(x, y) {
+  if (x>=y){
+    return x;
+  }else {
+    return y;
+  }
   // "x" e "y" son números enteros (int).
   // Devuelve el número más grande
   // Si son iguales, devuelve cualquiera de los dos
@@ -8,6 +13,18 @@ function obtenerMayor(x, y) {
 }
 
 function saludo(idioma) {
+  if(idioma === "aleman"){
+    return "Guten Tag!";
+  }
+  if(idioma === "mandarin"){
+    return "Ni Hao!";
+  }
+  if (idioma ===  "ingles"){
+    return "Hello!";
+  }else 
+  {
+    return "Hola!";
+  }
   // Devuelve un saludo en tres diferentes lenguajes:
   // Si "idioma" es "aleman", devuelve "Guten Tag!"
   // Si "idioma" es "mandarin", devuelve "Ni Hao!"
@@ -17,18 +34,34 @@ function saludo(idioma) {
 }
 
 function esDiezOCinco(numero) {
+  if(numero === 10 || numero === 5){
+    return true;
+  }else {
+    return false;
+  }
     // Devuelve "true" si "numero" es 10 o 5
     // De lo contrario, devuelve "false"
     // Tu código:
 }
 
 function estaEnRango(numero) {
+  if(numero<50 && numero>20){
+    return true;
+  }else{
+    return false;
+  }
   // Devuelve "true" si "numero" es menor que 50 y mayor que 20
   // De lo contrario, devuelve "false"
   // Tu código:
 }
 
 function esEntero(numero) {
+  var entero = Math.floor(numero);
+  if(numero === entero){
+    return true;
+  }else {
+    return false;
+  }
   // Devuelve "true" si "numero" es un entero (int/integer)
   // Ejemplo: 0.8 -> false
   // Ejemplo: 1 -> true
@@ -39,6 +72,15 @@ function esEntero(numero) {
 }
 
 function fizzBuzz(numero) {
+  if(numero%3 === 0 && numero % 5 === 0){
+    return "fizzbuzz";
+  }if(numero%3 === 0 ){
+    return "fizz";
+  }if (numero%5 === 0 ){
+    return "buzz";
+  }else{
+    return numero;
+  }
   // Si "numero" es divisible entre 3, devuelve "fizz"
   // Si "numero" es divisible entre 5, devuelve "buzz"
   // Si "numero" es divisible entre 3 y 5 (ambos), devuelve "fizzbuzz"
@@ -46,6 +88,17 @@ function fizzBuzz(numero) {
 }
 
 function esPrimo(numero) {
+   if(numero === 0 || numero === 1){
+      return false;
+    }
+
+  for(var i=2; i<=numero; i++){
+       if(numero%i === 0){
+      return false;
+    }else {
+      return true;
+    }
+  }
   // Devuelve "true" si "numero" es primo
   // De lo contrario devuelve "falso"
   // Pista: un número primo solo es divisible por sí mismo y por 1
